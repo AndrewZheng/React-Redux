@@ -8,7 +8,7 @@ import {fetchPosts} from '../actions/posts';
 
          let article=this.props.article;
          if (!article){
-             return (<div> Loading</div>);
+             return (<div>Loading...</div>);
          }
           return (<div key={article.id}>
             <img className="author-avatar" src={article.author.avatar_url}/>

@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
-import {fetchPosts} from '../actions/posts.js';
+import {fetchPosts} from '../actions/posts';
 import {connect} from 'react-redux';
+import ArticleBlock from '../components/ArticleBlock'
 
 class App extends Component{
 	componentWillMount(){
@@ -10,15 +11,19 @@ class App extends Component{
 		if(!this.props.articles){
 			return(<div>Loading....</div>);
 		}
-		console.log(this.props.articles);
+		
 		return (
-			<div>Hello React!</div>
+			<div>{
+				this.props.articles.map((article)=>{
+                   return (<ArticleBlock key={article.id} article={article} />);
+				})
+			}</div>
 		);
 	}
 }
 
-function mapStateToPros(state){
-   return {articles:state.posts.all};
-}
-
-export default connect({mapStateToPros},{fetchPosts})(App);
+export default connect(
+     (state)=>
+    {return ({ articles: state.posts.all.data 
+           })},
+        {fetchPosts})(App);

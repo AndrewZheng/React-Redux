@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 import { reducer as formReducer } from 'redux-form';
-import { FETCH_POSTS} from '../actions/post';
+import { FETCH_POSTS} from '../actions/posts';
 
 const INITIAL_STATE = { all: [], post: null };
 

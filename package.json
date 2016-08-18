@@ -1,9 +1,9 @@
 {
-  "name": "SimpleApp",
+  "name": "GreatApp",
   "version": "0.0.1",
   "private": true,
   "scripts": {
-  "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js"
+  "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --port 8082"
   },
   
   "devDependencies": {    

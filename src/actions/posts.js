@@ -1,8 +1,8 @@
-import axios from {Axios};
+import axios from 'axios';
 export const FETCH_POSTS="FETCH_POSTS";
 
 export function fetchPosts(){
-    let promise=axios.get("https://app.innocellence.com/internal/api/get/internal/api/v1/topics?accesstoken=c9a93613-bfb3-45b3-b706-d20c85ab7143")
+    let promise=axios.get("https://app.innocellence.com/internal/api/v1/topics?accesstoken=62044d84-aed1-4769-be35-144648a6c4a0")
     return {
         type:FETCH_POSTS,
         payload:promise
